@@ -38,4 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     return svgElement;
   }
+
+  function computeConvexHull() {
+    // create 2 arrays, UpperHull and LowerHull.
+    // Sort the points by x-coordinate (asc), resulting in a sequence p[0],...,p[n]
+    // Put the points p[0] and p[1] in a list UpperHull, with p[0] at index 0
+    // for: i = 2, i < n, i++
+      // do: append p[i] to UpperHull
+        // while: UpperHull contains more than 2 points and the last 3 points
+        //        in UpperHull do not make a right turn
+          // do: Delete the middle of the last three points from UpperHull
+    // Put the points p[n] and p[n-1]  in LowerHull with p[n] at index 0
+    // for: i = n - 2, i > 1, i--
+      // do: append p[i] to LowerHull
+  }
 });
